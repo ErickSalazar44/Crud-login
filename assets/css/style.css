@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*PALETA DE COLORES*/
+:root {
+    --text-important: #ffffff;
+    --text-important2: #ffffffa8;
+    --body-fondo: #161E31;
+    --background-color: #2d3250;
+    --background-color2: #424769;
+    --text-light: #757a97;
+    --btn-style: #f9b17a;
+    --btn-styleSombra: #f9b17aa9 1px 1px 15px;
+    --letter-spacing: 2px;
+    --sombraCard: inset rgb(0 0 0 / 37%) 0px 0px 27px -5px, rgb(0 0 0 / 31%) -8px 12px 16px -8px;
+    --color-eliminar:#c57979;
+    --btn-edit: #B9C2DF;
+    --btn-styleSombraEdit: #B9C2DF 1px 1px 15px;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--body-fondo);
+    color: var(--text-important);
+}
+img {
+    display: block;
+    width: 100%;
+}
+/*----------------------CONTENEDORES---------------------------*/
+.container {
+    max-width: 1600px;
+    max-height: 900px;
+    margin: auto;
+}
+section {
+    width: 100%;
+    height: 100vh;
+}
+.container_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.formUsers {
+    background-color: var(--background-color);
+    width: 86%;
+    height: 80vh; 
+    max-height: 700px;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    box-shadow: var(--sombraCard);
+}
+/*-------------------------LOGIN----------------------------------*/
+.registrarUsers {
+    padding: 3rem 0  3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.formHeader {
+    display: flex;
+    gap: 2rem;
+    font-weight: 100;
+    font-size: 0.7rem;
+    letter-spacing: var(--letter-spacing);
+    
+}
+.loginTittle {
+    position: relative;
+    color: var(--text-important);
+}
+/*linea de login y edit*/
+.enfoque::after {
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+    background-color: var(--btn-style);
+    width: 130%;
+    border-radius: 6px;
+}
+.editTitle {
+    color: var(--text-light);
+}
+.formTittle {
+    font-size: 1.3rem;
+    letter-spacing: calc(var(--letter-spacing) + 4px) ;
+    font-weight: 200;
+    margin-top: 2rem;
+}
+
+.formTittle > p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.formInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formInput {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.formInput > input{
+    background-color: var(--background-color2) !important;
+    border: none;
+    width: 100%;
+    height: 3.4rem;
+    position: relative;
+    outline: none;
+    padding: 1.3rem 1rem 0.6rem;
+    color: var(--text-important);
+}
+
+.formInput > label:before {
+    position: absolute;
+    width: 10rem;
+    height: 1rem;
+    z-index: 1000;
+    top: 8px;
+    left: 18px;
+    color: var(--text-light);
+    font-size: 12px;
+}
+.formInput > .yourName::before {content: "Enter your name";}
+.formInput > .emailUser::before {content: "Enter your e-mail adress"}
+.formInput > label{
+    background-color: transparent;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -3px;
+    border-radius: 3px;
+}
+.formInput:focus-within > label  {
+    background-color: var(--btn-style);
+}
+.btn {
+    width: 42%;
+    height: 3rem;
+    border: none;
+    background-color: var(--btn-style);
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: var(--btn-styleSombra);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    color: var(--background-color);
+    margin: 3rem 0 1rem;
+}
+.btn-edit {
+    background-color: var(--btn-edit);
+    box-shadow: var(--btn-styleSombraEdit);
+}
+.formCheckBox {
+    width: 85%;
+    font-size: 0.6rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkBox {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.checkbox_custom {
+    display: inline-block;
+    background-color: var(--background-color);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--btn-style);
+}
+.formCheckBox > p {
+    color: var(--text-light);
+}
+
+/*====================USERS==================*/
+
+.Users {
+    background-image: url('/martes/assets/img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 3rem;
+    overflow-y: scroll;
+}
+.Users::-webkit-scrollbar {
+    width: 6px;
+}
+.Users::-webkit-scrollbar-track {
+    background: var(--btn-edit);
+}
+.Users::-webkit-scrollbar-thumb {
+    background: var(--background-color2); 
+}
+.UsersHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.UsersHeader > h2{
+    color: var(--background-color2);
+    background-color: var(--btn-style);
+    box-shadow: var(--btn-styleSombra);
+    border-radius: 1rem;
+    width: 6rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 8px;
+}
+.UserInf table {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+}
+.tableHeader {overflow: hidden;}
+.tableHeader > tr {
+    background-color: var(--background-color2);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.UserInf tbody {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.UserInf tbody > tr {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 12px;
+    color: var(--text-important2);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    align-items: center;
+}
+/*icon */
+.bx {
+    font-size: 1.2rem;
+    margin-left:0.6rem;
+}
+
+.bx-trash {
+    color: var(--color-eliminar);
+}
+.bx-edit-alt {
+    color: var(--btn-style);
+}
+@media (max-width: 1000px) {
+    .formUsers {
+        width: 90vw;
+        max-height: 90%;
+        height: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .registrarUsers {
+        grid-column: 1 / 3;
+        padding: 3.6rem;
+    }
+    .formHeader{
+        gap: 3rem;
+        font-size: 0.9rem;
+    }
+    .formTittle{
+        margin-top: 1rem;
+        letter-spacing: 5px;
+        font-size: 1rem;
+    }
+    .formInput{
+        width: 86%;
+    }
+    .Users {
+        grid-column: 1 / 3;
+    }
+}
+@media (max-width: 700px) {
+    .container_form {
+        padding-top: 2rem;
+        align-items: baseline;
+        height: 1200px;
+    }
+    .formUsers {
+        width: 90vw;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+@media (max-width: 400px) {
+    .container_form {
+        height: 1073px;
+    }
+    .formUsers {
+        width: 98%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .registrarUsers {
+        grid-column: 1 / 3;
+        padding: 2.5rem;
+    }
+    .formHeader{
+        gap: 3rem;
+        font-size: 0.7rem;
+    }
+    .formTittle{
+        margin-top: 1rem;
+        letter-spacing: 2px;
+    }
+    .formInput{
+        width: 100%;
+    }
+    .Users {
+        padding: 1.5rem;
+        grid-column: 1 / 3;
+    }
+    .btn {
+        margin: 2rem 0 0 0;
+        height: 40px;
+    }
+    .formCheckBox > p,.checkBox {
+        font-size: 0.5rem;
+    }
+    .UserInf tbody > tr {
+        font-size: 0.6rem;
+    }
+} 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" type="module" defer></script>
+</head>
+<body>
+    <main class="container">
+        <section>
+            <div class="container_form">
+                <div class="formUsers">
+                    <!-- Registrar Users -->
+                    <div class="registrarUsers">
+                        <div class="formHeader">
+                            <h4 id="tittle" class="loginTittle enfoque">Login</h4>
+                            <h4 id="edit" class="editTitle">Edit user</h4>
+                        </div>
+
+                        <div class="formTittle">
+                            <h1>Sign up</h1>
+                            <p>welcome to academlo</p>
+                        </div>
+
+                        <form id="formUsers">
+                            <div class="formInputContainer">
+                                <div class="formInput">
+                                    <label class="yourName" for="nameUser"></label>
+                                    <input type="text" id="nameUser" maxlength="6">
+                                </div>
+                                <div class="formInput">
+                                    <label class="emailUser" for="emailUser"></label>
+                                    <input type="email" id="emailUser">
+                                </div>
+                                <div class="formCheckBox">
+                                    <div class="checkBox">
+                                        <input class="checkbox_custom" type="checkbox" name="condiciones" id="condiciones">
+                                        <label for="condiciones">I agree to the terms of service</label>
+                                    </div>
+                                    <p>terms and privacy policy</p>
+                                </div>
+                            </div>
+                            <button class="btn">Sign up</button>
+                        </form>
+                    </div>
+                    <!-- Users -->
+                    <div class="Users">
+                        <div class="UsersHeader">
+                            <h2>Members</h2>
+                            <div class="UserInf">
+                                <table>
+                                    <thead class="tableHeader">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Option</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="User"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
