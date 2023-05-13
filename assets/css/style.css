@@ -199,7 +199,7 @@ section {
 /*====================USERS==================*/
 
 .Users {
-    background-image: url('/martes/assets/img/fondo.jpg');
+    background-image: url('/assets/img/fondo.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
